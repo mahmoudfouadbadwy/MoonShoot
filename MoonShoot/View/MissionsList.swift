@@ -8,15 +8,12 @@
 import SwiftUI
 
 struct MissionsList: View {
-    
-    private let astronauts = Helper.getAstronauts()
     private let missions = Helper.getMissions()
     
     var body: some View {
         List(missions) { mission in
             NavigationLink(destination:
-                            MissionView(mission: mission,
-                                        astronauts: self.astronauts)) {
+                            MissionView(mission: mission)) {
                 Image(mission.image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -27,7 +24,8 @@ struct MissionsList: View {
                     Text(mission.formattedLaunchDate)
                 }
             }
-        }.navigationBarTitle("Moonshot")
+        }
+        .navigationBarTitle("Moonshot")
     }
 }
 

@@ -16,17 +16,16 @@ struct MissionView: View {
         MissionDetails(mission: mission, crewMembers: crewMembers)
     }
     
-    init(mission: Mission, astronauts: [Astronaut]) {
+    init(mission: Mission) {
         self.mission = mission
         self.crewMembers = Helper.getCrewMembers(in: mission)
     }
 }
 
 struct MissionView_Previews: PreviewProvider {
-    static let missions = Helper.getMissions()
-    static let astronauts = Helper.getAstronauts()
+    private static let missions = Helper.getMissions()
     
     static var previews: some View {
-        MissionView(mission: missions[0], astronauts: astronauts)
+        MissionView(mission: missions[0])
     }
 }

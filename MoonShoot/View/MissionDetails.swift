@@ -46,13 +46,16 @@ struct MissionDetails: View {
                                 }
                                 
                                 Spacer()
-                            }.padding(.horizontal)
-                        }.buttonStyle(PlainButtonStyle())
+                            }
+                            .padding(.horizontal)
+                        }
+                        .buttonStyle(PlainButtonStyle())
                     }
                     
                     Spacer(minLength: 25)
                 }
-            }.navigationBarTitle(Text(mission.displayName), displayMode: .inline)
+            }
+            .navigationBarTitle(Text(mission.displayName), displayMode: .inline)
             
         }
     }
