@@ -13,7 +13,8 @@ struct MissionView: View {
     private let crewMembers: [CrewMember]
     
     var body: some View {
-        MissionDetails(mission: mission, crewMembers: crewMembers)
+        MissionDetails(mission: mission,
+                       crewMembers: crewMembers)
     }
     
     init(mission: Mission) {

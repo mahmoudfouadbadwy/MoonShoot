@@ -14,6 +14,7 @@ struct MissionsList: View {
         List(missions) { mission in
             NavigationLink(destination:
                             MissionView(mission: mission)) {
+                
                 Image(mission.image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
